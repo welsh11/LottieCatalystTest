@@ -11,6 +11,7 @@
 		917A9F35299D4270003BE17E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A9F34299D4270003BE17E /* ContentView.swift */; };
 		917A9F37299D4272003BE17E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917A9F36299D4272003BE17E /* Assets.xcassets */; };
 		917A9F3A299D4272003BE17E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917A9F39299D4272003BE17E /* Preview Assets.xcassets */; };
+		917A9F42299D4299003BE17E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 917A9F41299D4299003BE17E /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		917A9F34299D4270003BE17E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		917A9F36299D4272003BE17E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		917A9F39299D4272003BE17E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		917A9F43299D42AE003BE17E /* LottieTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LottieTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917A9F42299D4299003BE17E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		917A9F31299D4270003BE17E /* LottieTest */ = {
 			isa = PBXGroup;
 			children = (
+				917A9F43299D42AE003BE17E /* LottieTest.entitlements */,
 				917A9F32299D4270003BE17E /* LottieTestApp.swift */,
 				917A9F34299D4270003BE17E /* ContentView.swift */,
 				917A9F36299D4272003BE17E /* Assets.xcassets */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = LottieTest;
+			packageProductDependencies = (
+				917A9F41299D4299003BE17E /* Lottie */,
+			);
 			productName = LottieTest;
 			productReference = 917A9F2F299D4270003BE17E /* LottieTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 917A9F26299D4270003BE17E;
+			packageReferences = (
+				917A9F40299D4299003BE17E /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 917A9F30299D4270003BE17E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LottieTest/LottieTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LottieTest/Preview Content\"";
@@ -282,6 +293,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.martianmoo.test.LottieTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LottieTest/LottieTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LottieTest/Preview Content\"";
@@ -311,6 +326,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.martianmoo.test.LottieTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		917A9F40299D4299003BE17E /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		917A9F41299D4299003BE17E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 917A9F40299D4299003BE17E /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 917A9F27299D4270003BE17E /* Project object */;
 }
